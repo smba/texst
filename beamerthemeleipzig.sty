@@ -96,19 +96,7 @@
 %---------------------------------------------------------------------
 % Specification
 %---------------------------------------------------------------------
-\if@doSans%
-	% sans serif math %
-	\usepackage[no-math]{fontspec}%	
-	\setmainfont{Arial}%
-\else%
-	% serif math %
-	\usepackage{fontspec}%	
-	\usefonttheme[onlymath]{serif}%
-\fi%
-	\newfontfamily\Light{Arial}%
-	\newfontfamily\Bold{Arial-Bold}%
-	\setsansfont{Arial}%
-\renewcommand\UrlFont{\Bold}%
+\usepackage{helvet}
 
 %---------------------------------------------------------------------
 % Titlepage
