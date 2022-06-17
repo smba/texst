@@ -17,7 +17,9 @@ jobs:
         run: |
           git config --global user.name 'sws-bot'
           git config --global user.email 'iamabotanddonothaveavaliudemail@address.org'
+          git stash
           git pull
+          git stash pop
           git checkout gh-pages
           git add main.pdf
           git commit main.pdf -m "automated push"
