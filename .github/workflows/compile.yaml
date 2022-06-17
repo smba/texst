@@ -11,7 +11,9 @@ jobs:
         with:
           root_file: example.tex
       - name: Release LaTeX dopcument to Github pages
-        uses: softprops/action-gh-release@v1
-        if: startsWith(github.ref, 'refs/tags/', '')
-        with:
-          files: example.pdf
+        run: |
+          git config --global user.name 'sws-bot'
+          git config --global user.email 'foo@bar.org'
+          git checkout -b gh-pages
+          git commit example.pdf -m "automated push"
+          git push
