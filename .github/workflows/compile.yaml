@@ -9,12 +9,12 @@ jobs:
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v2
         with:
-          root_file: example.tex
+          root_file: main.tex
       - name: Release LaTeX dopcument to Github pages
         run: |
           git config --global user.name 'sws-bot'
           git config --global user.email 'iamabotanddonothaveavaliudemail@address.org'
           git pull
           git checkout gh-pages
-          git commit example.pdf -m "automated push"
+          git commit main.pdf -m "automated push"
           git push --set-upstream origin gh-pages
