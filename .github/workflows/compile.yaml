@@ -12,6 +12,5 @@ jobs:
           root_file: example.tex
       - name: Release LaTeX dopcument to Github pages
         uses: softprops/action-gh-release@v1
-        if: startsWith(github.ref, 'refs/tags/')
         with:
           files: example.pdf
