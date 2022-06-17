@@ -1,0 +1,67 @@
+\documentclass[aspectratio=169]{beamer}
+
+\usetheme{leipzig}
+
+\usepackage{booktabs}
+\usepackage{datetime}
+\usepackage{paralist}
+\usepackage{blindtext}
+
+\usepackage[ngerman]{babel}
+
+% some macro fun
+\setbeamerfont{bibliography item}{size=\tiny}
+\setbeamerfont{bibliography entry author}{size=\tiny}
+\setbeamerfont{bibliography entry title}{size=\tiny}
+\setbeamerfont{bibliography entry location}{size=\tiny}
+\setbeamerfont{bibliography entry note}{size=\tiny}
+
+\setbeamerfont{subsection in toc}{size=\footnotesize}
+
+\title[Abschlussarbeiten]{Abschlussarbeiten}
+\subtitle[]{Bachelor-/Master-Seminar}
+\author{}
+\institute{}
+\date{
+	{\vfill \tiny Letzte Änderung am \today\,um \currenttime}
+}
+\titlegraphic{}
+\location{}
+\thankstitle{}
+\address{}
+\email{}
+\phone{}
+\website{https://sws.informatik.uni-leipzig.de}
+
+
+\pretocmd{\tableofcontents}{\begin{minipage}{\textwidth}}{}{}
+	\apptocmd{\tableofcontents}{\end{minipage}}{}{}
+
+\begin{document}
+\frame{
+	\maketitle
+}
+
+
+\begin{frame}{Übersicht}
+  \setbeamertemplate{section in toc}[sections numbered]
+  \tableofcontents%[hideallsubsections]
+\end{frame}
+
+\section{Ablauf und Betreuung}
+\input{tex/general.tex}
+
+\section{Offene Themen}
+\input{tex/open_topics.tex}
+
+\section{Laufende Arbeiten}
+\input{tex/ongoing_topics.tex}
+
+\section{Literatur}
+\begin{frame}[allowframebreaks]{Literatur}
+	\setbeamertemplate{bibliography item}[text]
+	\bibliographystyle{apalike}
+	\bibliography{bibliography.bib}	
+\end{frame}
+
+\end{document}
