@@ -15,6 +15,6 @@ jobs:
           git config --global user.name 'sws-bot'
           git config --global user.email 'foo@bar.org'
           git pull
-          git checkout -b gh-pages
+          git checkout gh-pages
           git commit example.pdf -m "automated push"
           git push --set-upstream origin gh-pages
