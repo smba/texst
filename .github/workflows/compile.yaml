@@ -9,5 +9,4 @@ jobs:
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v2
         with:
-          root_file: main.tex
-          latexmk_use_lualatex: true
+          root_file: example.tex
