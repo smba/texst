@@ -16,4 +16,4 @@ jobs:
           git config --global user.email 'foo@bar.org'
           git checkout -b gh-pages
           git commit example.pdf -m "automated push"
-          git push
+          git push --set-upstream origin gh-pages
