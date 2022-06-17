@@ -24,4 +24,4 @@ jobs:
           git config --global user.name 'sws-bot'
           git config --global user.email 'iamabotanddonothaveavaliudemail@address.org'
           git commit main.pdf -m "automated push"
-          git push --set-upstream origin gh-pages
+          git push --set-upstream origin main
